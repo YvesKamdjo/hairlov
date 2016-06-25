@@ -16,7 +16,7 @@
         ->setAttribute('class', 'form-control')
     ;
 
-    // Diplôme
+    // Diplôme devenu CV
     $this->uploadProfessionnalQualificationForm
             ->setAttribute('action', $this->url('professionnal-profile-edit/send-qualification'))
             ->setAttribute('enctype', 'multipart/form-data');
@@ -273,14 +273,14 @@
 
         <div class="box">
             <div class="box-title-container clearfix">
-                <div class="box-title">Mon diplôme</div>
+                <div class="box-title">Mon CV</div>
             </div>
             <div class="box-content pb-5">
                 <?= $this->form()->openTag($this->uploadProfessionnalQualificationForm); ?>
 
                     <div class="alert alert-success alert-dismissible hidden js-qualification-upload-success">
                         <button type="button" class="close" data-dismiss="alert"><i class="material-icons">&#xE5CD;</i></button>
-                        Votre diplôme a été modifié avec succès.
+                        Votre CV a été modifié avec succès.
                     </div>
                     
                     <?php 
@@ -289,11 +289,11 @@
                         <div class="box box-content clearfix">
                             <div>
                                 <div class="pull-left " style="line-height: 38px;">
-                                    <b>Un diplôme à déjà été ajouté</b>
+                                    <b>Un CV à déjà été ajouté</b>
                                 </div>
                                 <div class="pull-right">
-                                    <a class="btn btn-default js-qualification-preview" target="_blank" href="<?= $this->url('application-load-image', ['category' => 'qualification', 'idImage' => $account->getQualificationFilename()]) ?>">Voir mon diplôme</a>
-                                    <button class="btn btn-primary js-show-qualification-edit">Modifier mon diplôme</button>
+                                    <a class="btn btn-default js-qualification-preview" target="_blank" href="<?= $this->url('application-load-image', ['category' => 'qualification', 'idImage' => $account->getQualificationFilename()]) ?>">Voir mon CV</a>
+                                    <button class="btn btn-primary js-show-qualification-edit">Modifier mon CV</button>
                                 </div>
                             </div>
                         </div>
@@ -302,11 +302,10 @@
                     ?>
                     
                     <div class="form-group js-qualification-upload-dropzone-row <?= ($account->getQualificationFilename() !== null) ? 'hidden': ''?>">
-                        <label for="qualification-qualification">Nouveau diplôme</label>
+                        <label for="qualification-qualification">Nouveau CV</label>
                         <div class="file-dropzone js-qualification-upload-dropzone">
                             <p class="text-left small">
-                                Vos clients seront rassurés que nous mentionnons tous vos diplômes dans votre profil.<br>
-                                Même des diplômes qui n'ont rien à voir avec votre métier.
+                                Vos clients seront rassurés que nous mentionnons votre parcours dans votre profil.<br>
                             </p>
                             <div class="drop-text">Glissez-déposez votre fichier ici</div>
                             <div class="separator-text"><div class="text">ou</div></div>
@@ -324,6 +323,16 @@
                     </div>
                     
                 <?= $this->form()->closeTag($this->uploadProfessionnalQualificationForm); ?>
+            </div>
+        </div>
+        <div class="box">
+             <div class="box-title-container clearfix">
+                <div class="box-title">Mes passions</div>
+            </div>
+            <div class="box-content pb-5">
+                <input type="checkbox"/> <label>Massage</label>
+                <input type="checkbox"/> <label>Coiffure</label>
+                <input type="checkbox"/> <label>Tresses</label>
             </div>
         </div>
     </div>

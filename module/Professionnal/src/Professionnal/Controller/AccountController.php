@@ -211,7 +211,7 @@ class AccountController extends AbstractActionController
                 ->get('Logger\Error')
                 ->info($exception->getMessage());
             
-            $jsonModel->setVariable('message', "Votre diplôme n'a pas pu être modifié. Si le problème persiste, veuillez contacter notre service client.");
+            $jsonModel->setVariable('message', "Votre CV n'a pas pu être modifié. Si le problème persiste, veuillez contacter notre service client.");
         }
         
         return $jsonModel;

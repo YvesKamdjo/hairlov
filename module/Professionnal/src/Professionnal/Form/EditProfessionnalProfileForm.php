@@ -91,6 +91,8 @@ class EditProfessionnalProfileForm extends Form
         $biographyElement = new Text('biography');
         $biographyElement->setValue($this->account->getBiography());
         $this->add($biographyElement);
+
+        //TODO: Ajouter les prestations venues de la Base de données
     }
 
     /**
